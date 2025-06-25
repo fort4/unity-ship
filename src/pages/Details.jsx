@@ -10,7 +10,7 @@ export default function Details() {
 
       <section className="mb-5 text-center">
         <p className="text-muted mb-2">
-          개발 기간: 2025.06.18 ~ 06.23 | 1인 개발 프로젝트
+          개발 기간: 2025.06.18 ~ 06.23 | 1인 개발
         </p>
         <p className="lead">
             사용자 입력에 따른 물리 반응, Raycast 감지, UI 표시 등 <br />
@@ -20,10 +20,10 @@ export default function Details() {
       </section>
 
       {/* 2. 핵심 기능별 상세 설명 섹션 */}
-      <div className="row gy-5 text-center"> {/* 섹션 간 세로 간격 조절 */}
+      <div className="row gy-5 text-center">
 
         {/* --- 선박 조작 시스템 --- */}
-        <section className="col-12">
+        <section className="col-12" id="section-ship-control">
           <h2 className="fw-bold mb-3 text-primary">1. 선박 조작 시스템</h2>
           <p className="mb-4">
             Rigidbody 컴포넌트를 사용하여 선박의 추진력, 회전력, 감속 저항 등 물리 기반의 이동을 구현했습니다.<br />
@@ -42,7 +42,7 @@ export default function Details() {
         </section>
 
         {/* --- 레이더 및 탐지 시스템 --- */}
-        <section className="col-12">
+        <section className="col-12" id="section-radar">
           <h2 className="fw-bold mb-3 text-primary">2. 레이더 및 탐지 시스템</h2>
           <p className="mb-4">
             Raycast를 기반으로 선박 전방 일정 범위 내의 장애물과 목표물(부표)을 탐지합니다.<br />
@@ -59,7 +59,7 @@ export default function Details() {
         </section>
 
         {/* --- 아이템/점수 관리 --- */}
-        <section className="col-12">
+        <section className="col-12" id="section-items-score">
           <h2 className="fw-bold mb-3 text-primary">3. 아이템/점수 시스템</h2>
           <p className="mb-4">
             맵에 배치된 부표(캡슐)를 수집하면 점수가 증가하고, UI에 실시간으로 반영됩니다.<br />
@@ -90,13 +90,13 @@ export default function Details() {
                 src="/images/colliderset.png"
                 alt="콜라이더 줌아웃"
                 className="img-fluid rounded shadow-sm"
-                style={{ width: '320px', height: '240px', objectFit: 'cover' }}
+                style={{ width: '360px', height: '280px', objectFit: 'cover' }}
                 />
                 <img
                 src="/images/webglset1.png"
                 alt="WebGL 세팅"
                 className="img-fluid rounded shadow-sm"
-                style={{ width: '320px', height: '240px', objectFit: 'cover' }}
+                style={{ width: '360px', height: '280px', objectFit: 'cover' }}
                 />
             </div>
           <p className="text-muted text-center mt-2 small">▲ 환경 구현 및 WebGL 최적화 설정 일부</p>
