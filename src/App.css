@@ -1,8 +1,16 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+body > #root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
 }
 
 .logo {
@@ -16,6 +24,16 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.feature-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.feature-card:hover {
+  border-color: #0d6efd !important; /* Bootstrap primary */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 @keyframes logo-spin {

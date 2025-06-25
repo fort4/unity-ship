@@ -8,42 +8,43 @@ export default function Home() {
       </h1>
 
       <p className="text-center text-muted mb-4">
-        2025.06.18 ~ 06.23 | 1인 개발
+        개발 기간: 2025.06.18 ~ 06.23 | 1인 개발
       </p>
 
-      <p className="lead text-center mb-5">
-        사용자가 직접 선박을 조작하여<br />
-        장애물을 회피하고 아이템을 획득하는<br />
-        WebGL 기반 인터랙티브 시뮬레이션입니다.
-      </p>
-
-      <div className="row text-center mb-5">
-        <div className="col-md-4 mb-3">
-          <h5>🚢 선박 조작</h5>
-          <p className="text-muted">가속, 회전, 감속 등 실감나는 물리 구현</p>
-        </div>
-        <div className="col-md-4 mb-3">
-          <h5>📡 레이더 UI</h5>
-          <p className="text-muted">Raycast 기반 장애물 탐지 시각화</p>
-        </div>
-        <div className="col-md-4 mb-3">
-          <h5>🧰 아이템 획득</h5>
-          <p className="text-muted">아이템 수집 → 점수 증가</p>
-        </div>
+      <div className="row g-4 mb-5">
+        {[
+          {
+            icon: '🚢',
+            title: '선박 조작 시스템',
+            desc: 'Rigidbody를 활용한 선박 이동 및 가속 기능을 구현했습니다.',
+          },
+          {
+            icon: '📡',
+            title: '레이더 및 탐지',
+            desc: 'Raycast 기반으로 장애물과 목표물을 탐지하고 UI에 표시합니다.',
+          },
+          {
+            icon: '🎯',
+            title: '아이템/점수 관리',
+            desc: '부표 수집 시 점수 증가 및 UI 반영, 장애물 충돌 시 감점 처리를 구현했습니다.',
+          },
+        ].map((feature, idx) => (
+          <div className="col-md-4" key={idx}>
+            <div className="card h-100 border border-secondary-subtle shadow-sm feature-card">
+              <div className="card-body text-center">
+                <div className="display-5 mb-3">{feature.icon}</div>
+                <h5 className="card-title">{feature.title}</h5>
+                <p className="card-text text-muted">{feature.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="text-center">
-        <Link to="/simulation" className="btn btn-primary btn-lg me-3">
+        <Link to="/simulation" className="btn btn-primary btn-lg">
           시뮬레이션 체험하기
         </Link>
-        <a
-          href="https://github.com/your-username/unity-webapp"
-          target="_blank"
-          rel="noreferrer"
-          className="btn btn-outline-secondary btn-lg"
-        >
-          GitHub 보기
-        </a>
       </div>
     </div>
   );

@@ -1,22 +1,25 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Simulation from './pages/Simulation';
+import Details from './pages/Details';
+import AppNavbar from './components/AppNavbar';
+import TheFooter from './components/Foot';
+import './App.css';
 
 export default function App() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-        <Link to="/" className="navbar-brand">Unity Ship</Link>
-        <div className="navbar-nav">
-          <Link to="/" className="nav-link">소개</Link>
-          <Link to="/simulation" className="nav-link">시뮬레이션 체험</Link>
-        </div>
-      </nav>
+      {/* 헤더 */}
+      <AppNavbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/details" element={<Details />} />
         <Route path="/simulation" element={<Simulation />} />
       </Routes>
+      
+      {/* 푸터 */}
+      <TheFooter />
     </>
   );
 }
