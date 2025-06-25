@@ -7,7 +7,7 @@ const UnityPlayer = () => {
     <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
       {/* Unity WebGL iframe */}
       <iframe
-        src="/Build/index.html"
+        src="/webgl/index.html"
         title="Unity WebGL Player"
         width="100%"
         height="100%"
